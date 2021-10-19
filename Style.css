@@ -1,0 +1,97 @@
+@import url(https://fonts.googleapis.com/css?family=News+Cycle:400,700);
+body{
+    margin: 0;
+    background-color: black;
+    font-family: 'Helvetica-neue', 'Helvetica', sans-serif;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+
+.intro{
+    position: absolute;
+    top: 40%;
+    left: 35%;
+    z-index: 101;
+    animation: intro 6s ease-out 1s;
+    font-family: "News Cycle", sans-serif;
+    color: #00BFFF;
+    font-weight: 400;
+    font-size: 165%;
+    letter-spacing: .1em;
+    opacity: 0;
+}
+
+@keyframes intro{
+    0%{opacity: 0;}
+    20%{opacity: 1;}
+    90%{opacity: 1;}
+    100%{opacity: 0;}
+}
+
+.logo{
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    z-index: 101;
+    margin: auto;
+    animation: logo 9s ease-out 9s;
+    opacity: 0;
+    width: inherit;
+}
+
+@keyframes logo{
+    0%{
+        transform: scale(2.85);
+        opacity: 1;
+    }
+    50%{opacity: 1;}
+    100%{
+        transform: scale(0.1);
+        opacity: 0;
+    }
+}
+
+.shadow {
+    height: 100px;
+    background-color: #000;
+    box-shadow: 0px 10px 20px #000;
+    position: relative;
+    z-index: 100;
+}
+
+.texto{
+    color: #ffea29;
+    text-align: center;
+    transform: perspective(800px) rotateX(25deg) translateY(55%);
+    animation: letras 120s linear;
+    font-family: "News Cycle", sans-serif;
+}
+
+@keyframes letras{
+    0%{ transform: perspective(800px) rotateX(25deg) translateY(55%);}
+    100%{transform: perspective(800px) rotateX(25deg) translateY(-220%);}
+}
+
+.texto p{
+    font-size: 70px;
+    font-weight: bold;
+    text-shadow: 0px 0px 10px #000;
+    margin-top: 70px;
+    line-height: 1.4;
+}
+
+#titulo{
+    font-size: 85px;
+}
+
+#subtitulo{
+    font-weight: normal;
+    text-transform: uppercase;
+}
